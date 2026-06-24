@@ -6,5 +6,5 @@ def solution(s):
             if j % 2 == 0:
                 answer += slist[i][j].upper()
             else: answer += slist[i][j].lower()
-        if i != len(slist)-1: answer += " "
-    return answer
+        answer += " "
+    return answer[:-1]
