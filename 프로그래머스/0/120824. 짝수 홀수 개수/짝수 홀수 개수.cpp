@@ -4,14 +4,9 @@
 using namespace std;
 
 vector<int> solution(vector<int> num_list) {
-    vector<int> answer;
-    int odd = 0;
-    int even = 0;
-    for(int i=0; i<num_list.size(); i++) {
-        if(num_list[i]%2==0) { even += 1; }
-        else { odd += 1; }
+    vector<int> answer(2,0);
+    for(int num : num_list) {
+        answer[num%2]++;
     }
-    answer.push_back(even);
-    answer.push_back(odd);
     return answer;
 }
